@@ -1,0 +1,9 @@
+- hosts: zoidberg
+  tasks:
+    - name: Install packages with loop
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - sl
+        - cmatrix
